@@ -1,0 +1,102 @@
+============================================================
+  NSE/BSE INTRADAY SCANNER — DEPLOY & RUN GUIDE
+============================================================
+
+────────────────────────────────────────────────────────────
+OPTION A: DEPLOY ON VERCEL (Free, Online — Recommended)
+────────────────────────────────────────────────────────────
+
+STEP 1 — Go to https://github.com and create a FREE account
+
+STEP 2 — Create a new repository called "intraday-scanner"
+  Click "+" → New Repository → Name it → Create
+
+STEP 3 — Upload files to GitHub
+  - Click "uploading an existing file"
+  - Drag ALL files from this ZIP (public/, src/, package.json,
+    vercel.json) into the upload window
+  - Click "Commit changes"
+
+STEP 4 — Deploy on Vercel
+  - Go to https://vercel.com and sign in with GitHub
+  - Click "Add New Project"
+  - Select your "intraday-scanner" repository
+  - Leave ALL settings as default (DO NOT change anything)
+  - Click "Deploy"
+  - Wait 1-2 minutes ✅
+
+STEP 5 — Your app is LIVE at:
+  https://intraday-scanner-xxxx.vercel.app
+
+⚠ IMPORTANT: Works only during NSE Market Hours:
+  Monday–Friday, 9:15 AM – 3:30 PM IST
+
+────────────────────────────────────────────────────────────
+OPTION B: RUN LOCALLY ON YOUR PC
+────────────────────────────────────────────────────────────
+
+STEP 1 — Install Node.js from https://nodejs.org (LTS)
+
+STEP 2 — Extract this ZIP to Desktop
+
+STEP 3 — Open CMD / Terminal, run:
+  cd Desktop\intraday-scanner-vercel
+  npm install
+  npm start
+
+Browser opens at http://localhost:3000 ✅
+
+────────────────────────────────────────────────────────────
+FOLDER STRUCTURE (must stay exactly like this):
+────────────────────────────────────────────────────────────
+
+  intraday-scanner-vercel/
+  ├── public/
+  │   └── index.html          ← REQUIRED by React
+  ├── src/
+  │   ├── App.js              ← Main scanner code
+  │   └── index.js            ← Entry point
+  ├── package.json            ← Dependencies
+  └── vercel.json             ← Vercel deploy config
+
+────────────────────────────────────────────────────────────
+MARKET HOURS (when live data works):
+────────────────────────────────────────────────────────────
+  Monday to Friday: 9:15 AM – 3:30 PM IST
+
+  UPCOMING HOLIDAYS (NO DATA):
+  April 3  (Friday)  — Good Friday
+  April 14 (Tuesday) — Ambedkar Jayanti
+
+────────────────────────────────────────────────────────────
+HOW TO USE THE SCANNER:
+────────────────────────────────────────────────────────────
+  1. Set CAPITAL  → Your total trading budget (e.g. ₹5000)
+  2. Set MIN INVEST → Minimum per stock (e.g. ₹100)
+  3. Set RISK %   → Risk per trade (1% recommended)
+  4. Scanner loads 160+ NSE stocks automatically
+  5. TOP BUY SIGNALS shown as cards at the top
+  6. Click any stock card → Full trade plan opens
+  7. Trade plan shows:
+     - Entry Price (when to BUY)
+     - Target Price (where to SELL for profit)
+     - Stop Loss (exit if loss exceeds this)
+     - Quantity to buy
+     - Total investment needed
+     - Max profit / Max loss
+     - Risk:Reward ratio
+
+────────────────────────────────────────────────────────────
+SIGNALS GUIDE:
+────────────────────────────────────────────────────────────
+  STRONG BUY  (score 72-100) → Very strong — act fast
+  BUY         (score 58-71)  → Good opportunity
+  NEUTRAL     (score 44-57)  → Wait, unclear trend
+  SELL        (score 30-43)  → Avoid buying
+  STRONG SELL (score 0-29)   → Clear downtrend
+
+⚠ DISCLAIMER: Educational use only. Not SEBI-registered
+  financial advice. Intraday trading is high risk.
+  Always use stop-loss. Never invest borrowed money.
+
+============================================================
