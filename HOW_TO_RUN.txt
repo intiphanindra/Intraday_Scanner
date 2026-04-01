@@ -1,0 +1,111 @@
+============================================================
+  NSE/BSE INTRADAY STOCK SCANNER - HOW TO RUN
+============================================================
+
+REQUIREMENTS:
+  - Node.js (v16 or higher)
+  - Internet connection
+  - Windows / Mac / Linux PC
+
+------------------------------------------------------------
+STEP 1 — Install Node.js (only once)
+------------------------------------------------------------
+  Go to: https://nodejs.org
+  Download and install the LTS version.
+  After install, restart your computer.
+
+------------------------------------------------------------
+STEP 2 — Extract this ZIP folder
+------------------------------------------------------------
+  Right-click the ZIP → Extract All
+  Place the folder anywhere (e.g., Desktop)
+
+------------------------------------------------------------
+STEP 3 — Open Terminal / Command Prompt
+------------------------------------------------------------
+  Windows: Press Win+R → type "cmd" → Enter
+  Mac:     Open Terminal from Applications
+
+------------------------------------------------------------
+STEP 4 — Navigate to the project folder
+------------------------------------------------------------
+  Type this command (adjust path to where you extracted):
+
+  cd Desktop\intraday-scanner
+
+  (Mac/Linux: cd ~/Desktop/intraday-scanner)
+
+------------------------------------------------------------
+STEP 5 — Install dependencies (only once)
+------------------------------------------------------------
+  npm install
+
+  Wait for it to finish (1-3 minutes).
+
+------------------------------------------------------------
+STEP 6 — Start the app
+------------------------------------------------------------
+  npm start
+
+  Browser will automatically open at:
+  http://localhost:3000
+
+------------------------------------------------------------
+USAGE GUIDE:
+------------------------------------------------------------
+  1. Set your CAPITAL (e.g., ₹5000)
+  2. Set MIN INVEST (e.g., ₹100 for low-price stocks)
+  3. Set RISK % (1% recommended for beginners)
+  4. App auto-scans all 160+ stocks on load
+  5. TOP BUY SIGNALS shown as cards at the top
+  6. Click any stock → Full trade plan popup
+  7. Trade plan shows: Entry, Target, Stop Loss, Qty, Profit, Loss
+  8. Data auto-refreshes every 5 minutes
+
+------------------------------------------------------------
+MARKET HOURS (when data is available):
+------------------------------------------------------------
+  Monday to Friday
+  9:15 AM to 3:30 PM IST
+
+  APRIL 2026 HOLIDAYS (market closed):
+  - April 3  (Friday)  — Good Friday
+  - April 14 (Tuesday) — Ambedkar Jayanti
+
+------------------------------------------------------------
+SIGNALS EXPLAINED:
+------------------------------------------------------------
+  STRONG BUY  = Score 72-100 → Very strong uptrend signals
+  BUY         = Score 58-71  → Good buy opportunity
+  NEUTRAL     = Score 44-57  → Wait, no clear direction
+  SELL        = Score 30-43  → Avoid buying
+  STRONG SELL = Score 0-29   → Clear downtrend
+
+  Score is based on:
+  ✓ RSI (14) — Relative Strength Index
+  ✓ EMA 9 vs EMA 21 crossover
+  ✓ VWAP position
+  ✓ Candlestick Pattern detection
+  ✓ 3-bar price momentum
+  ✓ Volume Spike detection
+  ✓ ATR-based Target & Stop Loss
+
+------------------------------------------------------------
+STOP LOSS RULE (VERY IMPORTANT):
+------------------------------------------------------------
+  NEVER trade without a stop loss!
+  Stop Loss = Entry Price - (1.1 × ATR)
+  Target    = Entry Price + (2.2 × ATR)
+  Risk:Reward ratio always ≥ 1:2
+
+------------------------------------------------------------
+DISCLAIMER:
+------------------------------------------------------------
+  This app is for EDUCATIONAL purposes only.
+  Not SEBI-registered financial advice.
+  Intraday trading is HIGH RISK.
+  You may lose your entire investment.
+  Always use a stop-loss order.
+  Never invest borrowed money.
+
+============================================================
